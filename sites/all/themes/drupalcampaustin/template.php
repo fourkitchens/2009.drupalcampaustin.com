@@ -433,23 +433,6 @@ function drupalcampaustin_comment_submitted($comment) {
  * Adds "messages-multiple" class when more than one message of a particular type is present.
  */
 function drupalcampaustin_status_messages($display = NULL) {
-  /* DEBUGGING | TODO: REMOVE
-  drupal_set_message('Message1. Appends "messages-" to the message $type class to prevent collisions with div.warning. Adds "messages-multiple" class when more than one message of a particular type is present.');
-  drupal_set_message('Message2. Appends "messages-" to the message $type class to prevent collisions with div.warning. Adds "messages-multiple" class when more than one message of a particular type is present.');
-  drupal_set_message('Message3');
-  drupal_set_message('Message4');
-  
-  drupal_set_message('Message1. Appends "messages-" to the message $type class to prevent collisions with div.warning. Adds "messages-multiple" class when more than one message of a particular type is present.', 'warning');
-  drupal_set_message('Message2. Appends "messages-" to the message $type class to prevent collisions with div.warning. Adds "messages-multiple" class when more than one message of a particular type is present.', 'warning');
-  drupal_set_message('Message3', 'warning');
-  drupal_set_message('Message4', 'warning');
-  
-  drupal_set_message('Message1', 'error');
-  drupal_set_message('Message2', 'error');
-  drupal_set_message('Message3', 'error');
-  drupal_set_message('Message4', 'error');
-  */
-
   $output = '';
   foreach (drupal_get_messages($display) as $type => $messages) {
     $output .= '<div class="messages messages-' . $type;

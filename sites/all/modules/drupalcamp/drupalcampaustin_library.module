@@ -94,6 +94,8 @@ function drupalcampaustin_library_block_header_ribbon($user) {
   $output = '';
   $output .= '<div id="header-ribbon">';
 
+/*
+  // Commented out 2011-09-12 to show a "Thanks for the memories" graphic (see below). --TRN
   // Is the user logged in?
   if ($user->uid != 0) {
 
@@ -132,6 +134,10 @@ function drupalcampaustin_library_block_header_ribbon($user) {
   else {
     $output .= l('<img src="' . $path . 'header-ribbon-register.png" class="steps" alt="' . t('Register') . '" />', 'user/register', array('html' => TRUE, 'attributes' => array('title' => t('Register'))));
   }
+*/
+
+  // NEW as of 2011-09-12: Show a "Thanks for the memories" graphic. --TRN
+  $output .= '<img src="' . $path . 'header-ribbon-event-ended" class="steps" alt="Thanks for the memories!" />';
 
   $output .= '</div>';
 
